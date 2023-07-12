@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './skeleton-page.component.html',
-  styleUrls: ['./skeleton-page.component.css']
+  styles: [],
 })
-export class SkeletonPageComponent {
-
-}
+export class SkeletonPageComponent {}
