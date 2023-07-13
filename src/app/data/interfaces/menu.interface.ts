@@ -1,4 +1,4 @@
-export interface Menu {
+export interface MenuItem {
   label: string;
   routerLink: string;
 }

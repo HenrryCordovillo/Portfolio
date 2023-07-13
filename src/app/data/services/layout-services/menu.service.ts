@@ -1,20 +1,80 @@
 import { Injectable } from '@angular/core';
-import { Menu } from '@data/interfaces/menu.interface';
+import { MenuItem } from '@data/interfaces/menu.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MenuService {
-  public menuList: Menu[] = [];
+  public menuItemList: MenuItem[] = [];
 
   constructor() {}
 
-  getMenuList(): Menu[] {
-    this.menuList = [
-      { label: 'About', routerLink: '' },
-      { label: 'Contact', routerLink: '' },
-      { label: 'Dashboard', routerLink: '' },
+  getMenuList(): MenuItem[] {
+    this.menuItemList = [
+      { label: 'About', routerLink: 'about' },
+      { label: 'Contact', routerLink: 'contact' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
+      { label: 'Dashboard', routerLink: 'dashboard' },
     ];
-    return [...this.menuList];
+    return [...this.menuItemList];
   }
 }

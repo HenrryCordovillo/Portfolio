@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Menu } from '@data/interfaces/menu.interface';
+import { Component, OnInit, signal } from '@angular/core';
+import { MenuItem } from '@data/interfaces/menu.interface';
 import { MenuService } from '@data/services/layout-services/menu.service';
 
 @Component({
@@ -8,11 +8,11 @@ import { MenuService } from '@data/services/layout-services/menu.service';
   styles: [],
 })
 export class MenuComponent implements OnInit {
-  public menuList: Menu[] = [];
+  public menuItemsList = signal<MenuItem[]>([]);
 
   constructor(private menuService: MenuService) {}
 
   ngOnInit(): void {
-    this.menuList = this.menuService.getMenuList();
+    this.menuItemsList = signal(this.menuService.getMenuList());
   }
 }
