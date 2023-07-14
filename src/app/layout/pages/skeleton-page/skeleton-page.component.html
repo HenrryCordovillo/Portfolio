@@ -1,15 +1,9 @@
-<div class="m-0 p-0 h-max bg-slate-400">
-  <div class="fixed top-0 left-0 w-full bg-slate-500">
+<div class="flex flex-col min-h-screen">
+  <div class="sticky top-0 bg-slate-500">
     <layout-menu />
   </div>
-
-  <div>
-    <!-- <router-outlet /> -->
+  <div class="flex-grow bg-green-300">
+    <router-outlet />
   </div>
-  <div>
-    <!-- <layout-footer /> -->
-  </div>
+  <div class="bg-green-300"><layout-footer /></div>
 </div>
-
-<!-- class="fixed bottom-0 left-0 w-full bg-slate-500" -->
-<!--  -->
