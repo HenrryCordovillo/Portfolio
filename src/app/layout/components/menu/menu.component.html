@@ -1,12 +1,13 @@
 <nav>
-  <ul class="flex flex-wrap p-2">
-    <li
-      *ngFor="let menu of menuItemsList()"
-      class="p-2 m-1 rounded-md border border-sky-500 hover:bg-slate-600 cursor-pointer"
-      [routerLink]="[menu.routerLink]"
-      routerLinkActive="active"
-    >
-      {{ menu.label }}
+  <ul class="flex flex-wrap p-2 justify-end">
+    <li *ngFor="let menu of menuItemsList()" class="mx-4">
+      <a
+        [routerLink]="[menu.routerLink]"
+        routerLinkActive="rounded-lg outline outline-offset-8 outline-1"
+        class="hover:text-blue-400 cursor-pointer"
+      >
+        {{ menu.label }}
+      </a>
     </li>
   </ul>
 </nav>
