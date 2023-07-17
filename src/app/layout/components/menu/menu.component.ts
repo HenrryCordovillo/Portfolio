@@ -1,4 +1,10 @@
-import { Component, OnInit, signal } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  signal,
+} from '@angular/core';
 import { MenuItem } from '@data/interfaces/menu.interface';
 import { MenuService } from '@data/services/layout-services/menu.service';
 
@@ -8,11 +14,18 @@ import { MenuService } from '@data/services/layout-services/menu.service';
   styles: [],
 })
 export class MenuComponent implements OnInit {
+  @ViewChild('ulMenu')
+  private ulMenu!: ElementRef<HTMLDivElement>;
   public menuItemsList = signal<MenuItem[]>([]);
 
   constructor(private menuService: MenuService) {}
 
   ngOnInit(): void {
     this.menuItemsList = signal(this.menuService.getMenuList());
+  }
+
+  public openMenu(): void {
+    console.log(this.ulMenu);
+    this.ulMenu.nativeElement.classList.toggle('-translate-x-16');
   }
 }

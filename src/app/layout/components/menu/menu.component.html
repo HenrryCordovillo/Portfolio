@@ -1,6 +1,19 @@
 <nav>
-  <ul class="flex flex-wrap p-2 justify-end">
-    <li *ngFor="let menu of menuItemsList()" class="mx-4">
+  <div class="absolute top-2 left-2 w-12 md:hidden" (click)="openMenu()">
+    <img
+      src="assets/icons/horizontal_split_black_24dp.svg"
+      alt="barra lateral de menu"
+      class="w-full invert cursor-pointer"
+    />
+  </div>
+  <ul
+    #ulMenu
+    class="flex flex-col p-2 h-5 -translate-x-full translate-y-10 md:flex-row md:h-auto md:-translate-x-0 md:translate-y-0"
+  >
+    <li
+      *ngFor="let menu of menuItemsList()"
+      class="my-2 flex md:mx-4 lg:mx-4 xl:mx-4 2xl:mx-4"
+    >
       <a
         [routerLink]="[menu.routerLink]"
         routerLinkActive="rounded-lg outline outline-offset-8 outline-1"
