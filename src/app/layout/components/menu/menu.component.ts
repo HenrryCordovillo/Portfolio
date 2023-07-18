@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { MenuItem } from '@data/interfaces/menu.interface';
 import { MenuService } from '@data/services/layout-services/menu.service';
 
@@ -8,11 +8,13 @@ import { MenuService } from '@data/services/layout-services/menu.service';
   styles: [],
 })
 export class MenuComponent implements OnInit {
+  private readonly menuService = inject(MenuService);
   public menuItemsList = signal<MenuItem[]>([]);
 
-  constructor(private menuService: MenuService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.menuItemsList = signal(this.menuService.getMenuList());
+    this.menuItemsList.update((value) => this.menuService.getMenuList());
+    // this.menuItemsList.set(this.menuService.getMenuList());
   }
 }
