@@ -1,8 +1,11 @@
 import {
   Component,
   ElementRef,
+  EventEmitter,
   OnInit,
+  Output,
   ViewChild,
+  inject,
   signal,
 } from '@angular/core';
 import { MenuItem } from '@data/interfaces/menu.interface';
@@ -14,8 +17,10 @@ import { MenuService } from '@data/services/layout-services/menu.service';
   styles: [],
 })
 export class MenuComponent implements OnInit {
-  @ViewChild('ulMenu')
-  private ulMenu!: ElementRef<HTMLDivElement>;
+  @ViewChild('ulMenu') private ulMenu!: ElementRef<HTMLDivElement>;
+  @Output() classSticky = new EventEmitter<string[]>();
+  private readonly menuService = inject(MenuService);
+
   public menuItemsList = signal<MenuItem[]>([]);
 
   constructor() {}
@@ -23,9 +28,8 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.menuItemsList = signal(this.menuService.getMenuList());
   }
-
-  public openMenu(): void {
-    console.log(this.ulMenu);
-    this.ulMenu.nativeElement.classList.toggle('-translate-x-16');
+  public openMenu() {
+    this.ulMenu.nativeElement.classList.toggle('translate-y-0');
+    this.classSticky.emit(['sticky', 'top-0']);
   }
 }

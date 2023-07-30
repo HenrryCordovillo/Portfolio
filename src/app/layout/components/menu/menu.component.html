@@ -1,22 +1,23 @@
-<nav>
-  <div class="absolute top-2 left-2 w-12 md:hidden" (click)="openMenu()">
+<nav class="h-12 sm:h-auto">
+  <div
+    class="w-10 absolute top-2 right-6 invert cursor-pointer z-10 sm:hidden"
+    (click)="openMenu()"
+  >
     <img
       src="assets/icons/horizontal_split_black_24dp.svg"
       alt="barra lateral de menu"
-      class="w-full invert cursor-pointer"
+      class="w-full"
     />
   </div>
   <ul
     #ulMenu
-    class="flex flex-col p-2 h-5 -translate-x-full translate-y-10 md:flex-row md:h-auto md:-translate-x-0 md:translate-y-0"
+    class="flex flex-col items-center transition-transform -translate-y-full bg-slate-800 sm:flex-row sm:translate-y-0 sm:flex-wrap sm:bg-transparent"
   >
-    <li
-      *ngFor="let menu of menuItemsList()"
-      class="my-2 flex md:mx-4 lg:mx-4 xl:mx-4 2xl:mx-4"
-    >
+    <li class="p-2 sm:p-4" *ngFor="let menu of menuItemsList()">
       <a
         [routerLink]="[menu.routerLink]"
         routerLinkActive="rounded-lg outline outline-offset-8 outline-1"
+        (click)="openMenu()"
         class="hover:text-blue-400 cursor-pointer"
       >
         {{ menu.label }}
