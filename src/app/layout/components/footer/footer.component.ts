@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { SocialNetwokIcon } from '@data/interfaces/social-netwok.interface';
 import { FooterService } from '@data/services/layout-services/footer.service';
 
@@ -8,11 +8,15 @@ import { FooterService } from '@data/services/layout-services/footer.service';
   styles: [],
 })
 export class FooterComponent implements OnInit {
+  private readonly footerService = inject(FooterService);
   public socialNetworkIconList = signal<SocialNetwokIcon[]>([]);
-  constructor(private footerService: FooterService) {}
+  constructor() {}
   ngOnInit(): void {
-    this.socialNetworkIconList = signal(
+    this.socialNetworkIconList.update((value) =>
       this.footerService.getSocialNetworkIconList()
     );
+    /*    this.socialNetworkIconList.set(
+      this.footerService.getSocialNetworkIconList()
+    ); */
   }
 }

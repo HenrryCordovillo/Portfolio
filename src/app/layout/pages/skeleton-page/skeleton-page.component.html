@@ -1,13 +1,15 @@
-<div
-  class="flex flex-col min-h-screen bg-gradient-to-tr from-slate-600 to-slate-900"
->
-  <div class="sticky top-0 backdrop-blur-sm border-b border-slate-700 px-20 py-5">
-    <layout-menu />
+<div class="min-h-screen flex flex-col">
+  <div
+    #menu
+    class="backdrop-blur-sm border-b border-slate-700 sm:sticky sm:top-0"
+  >
+    <layout-menu (classSticky)="addClassSticky($event)"></layout-menu>
   </div>
-  <div class="flex-grow px-20">
+
+  <div class="mx-3 flex-grow sm:mx-16">
     <router-outlet />
   </div>
-  <div class="px-20">
+  <div class="mx-3 sm:mx-16">
     <layout-footer />
   </div>
 </div>
