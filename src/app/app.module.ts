@@ -18,7 +18,6 @@ import { LayoutModule } from '@layout/layout.module';
     AppRoutingModule,
     CoreModule,
     DataModule,
-    LayoutModule,
     SharedModule,
   ],
   providers: [],

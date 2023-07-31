@@ -6,6 +6,9 @@ html,
 body {
   margin: 0;
   color: rgb(196, 205, 213);
+  font-family: "Dongle", sans-serif;
+  font-size: 22px;
+  background-color: #0b2447;
 }
 /* Estilos para el loader principal */
 .lds-ripple {

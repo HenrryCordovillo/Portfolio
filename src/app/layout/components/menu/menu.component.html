@@ -1,4 +1,4 @@
-<nav class="h-12 sm:h-auto">
+<nav class="h-12 mx-4 sm:mx-24 sm:h-auto">
   <div
     class="w-10 absolute top-2 right-6 invert cursor-pointer z-10 sm:hidden"
     (click)="openMenu()"
@@ -13,12 +13,12 @@
     #ulMenu
     class="flex flex-col items-center transition-transform -translate-y-full bg-slate-800 sm:flex-row sm:translate-y-0 sm:flex-wrap sm:bg-transparent"
   >
-    <li class="p-2 sm:p-4" *ngFor="let menu of menuItemsList()">
+    <li class="p-2 sm:px-1" *ngFor="let menu of menuItemsList()">
       <a
         [routerLink]="[menu.routerLink]"
-        routerLinkActive="rounded-lg outline outline-offset-8 outline-1"
+        routerLinkActive="underline text-blue-400"
         (click)="openMenu()"
-        class="hover:text-blue-400 cursor-pointer"
+        class="hover:text-blue-400 cursor-pointer text-xl"
       >
         {{ menu.label }}
       </a>
