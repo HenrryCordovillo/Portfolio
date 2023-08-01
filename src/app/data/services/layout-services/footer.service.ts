@@ -13,27 +13,27 @@ export class FooterService {
     this.socialNetworkList = [
       {
         url: 'https://www.linkedin.com/in/henrry-cordovillo-3b807a97/',
-        src: 'assets/icons/linkedin_icon.svg',
+        src: 'assets/icons/linkedin_icon_white.svg',
         alt: 'link de comunicaion para linkedin',
       },
       {
         url: 'https://github.com/HenrryCordovillo',
-        src: 'assets/icons/github_icon.svg',
+        src: 'assets/icons/github_ico_withe.svg',
         alt: 'link de comunicaion para github',
       },
       {
         url: '',
-        src: 'assets/icons/whatsapp_icon.svg',
+        src: 'assets/icons/whatsapp_icon_white.svg',
         alt: 'link de comunicaion para whatsapp',
       },
       {
         url: '',
-        src: 'assets/icons/mail_icon.svg',
+        src: 'assets/icons/mail_icon_white.svg',
         alt: 'link de comunicaion para mail',
       },
       {
         url: '',
-        src: 'assets/icons/telegram_icon.svg',
+        src: 'assets/icons/telegram_icon_white.svg',
         alt: 'link de comunicaion para telegram',
       },
     ];
