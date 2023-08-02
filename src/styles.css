@@ -5,10 +5,10 @@
 html,
 body {
   margin: 0;
-  color: rgb(196, 205, 213);
+  color: #FFF6E0;
   font-family: "Dongle", sans-serif;
   font-size: 22px;
-  background-color: #0b2447;
+  background-color: #272829;
 }
 /* Estilos para el loader principal */
 .lds-ripple {
