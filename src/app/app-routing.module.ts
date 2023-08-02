@@ -24,12 +24,17 @@ const routes: Routes = [
             (m) => m.ContactModule
           ),
       }, */
+      {
+        path: '**',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
     ],
   },
 
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full',
   },
 ];
