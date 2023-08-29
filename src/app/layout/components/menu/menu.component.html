@@ -1,4 +1,4 @@
-<nav class="h-12 sm:mx-24 xl:mx-80 sm:h-auto">
+<nav class="h-12 sm:mx-24 xl:mx-32 sm:h-auto">
   <div
     class="w-7 absolute top-2 right-6 cursor-pointer z-10 sm:hidden"
     (click)="openMenu()"
@@ -9,16 +9,29 @@
       class="w-full"
     />
   </div>
+  <div class="absolute top-2 left-4 sm:left-24 xl:left-32 z-5">
+    <a class="flex" href="">
+      <img
+        src="assets/images/fotoPerfil1.jpg"
+        alt="imagen perfil"
+        class="w-8 h-8 rounded-full"
+      />
+      <span class="flex items-center">
+        <span class="mx-1 text-xl">Henrry Cordovillo</span>
+        <span class="material-symbols-rounded mx-1"> verified </span>
+      </span></a
+    >
+  </div>
   <ul
     #ulMenu
-    class="flex flex-col items-center transition-transform -translate-y-full bg-slate-800 sm:flex-row sm:translate-y-0 sm:flex-wrap sm:bg-transparent"
+    class="flex flex-col items-center transition-transform -translate-y-full bg-slate-800 sm:flex-row sm:translate-y-0 sm:flex-wrap sm:bg-transparent sm:justify-end"
   >
     <li class="p-2 sm:px-1" *ngFor="let menu of menuItemsList()">
       <a
         [routerLink]="[menu.routerLink]"
-        routerLinkActive="underline text-blue-400"
+        routerLinkActive="underline text-[#f57e67]"
         (click)="openMenu()"
-        class="hover:text-blue-400 cursor-pointer text-xl"
+        class="hover:text-[#f57e67] cursor-pointer text-xl"
       >
         {{ menu.label }}
       </a>

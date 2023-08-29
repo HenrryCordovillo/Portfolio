@@ -12,7 +12,8 @@ export class MenuService {
   getMenuList(): MenuItem[] {
     this.menuItemList = [
       { label: 'Home', routerLink: 'home' },
-   /*    { label: 'Contact', routerLink: 'contact' },
+      { label: 'About', routerLink: 'about' },
+      /*    { label: 'Contact', routerLink: 'contact' },
       { label: 'Dashboard', routerLink: 'dashboard' }, */
     ];
     return [...this.menuItemList];

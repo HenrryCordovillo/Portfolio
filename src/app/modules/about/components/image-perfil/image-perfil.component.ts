@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'home-image-perfil',
+  selector: 'about-image-perfil',
   templateUrl: './image-perfil.component.html',
   styles: [
   ]

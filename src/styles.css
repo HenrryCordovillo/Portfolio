@@ -5,10 +5,14 @@
 html,
 body {
   margin: 0;
-  color: #FFF6E0;
+  color: #d9c9a5;
   font-family: "Dongle", sans-serif;
-  font-size: 22px;
-  background-color: #272829;
+  font-size: 24px;
+  background-color: #281b24;
+}
+::selection {
+  background-color: #f57e67; /* Cambia el fondo de la selección a naranja */
+  color: #d9c9a5; /* Cambia el color del texto en la selección a blanco */
 }
 /* Estilos para el loader principal */
 .lds-ripple {
