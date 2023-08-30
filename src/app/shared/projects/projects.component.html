@@ -1,0 +1,22 @@
+<h1 class="text-xl md:text-4xl font-mono">Projects</h1>
+<ul class="flex flex-wrap justify-between mt-4">
+  <li
+    *ngFor="let project of projectList()"
+    class="p-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/4"
+  >
+    <shared-project [project]="project" />
+  </li>
+</ul>
+<p
+  (mouseenter)="translateRow()"
+  (mouseleave)="translateRow()"
+  class="w-full flex justify-end items-center text-lg text-[#f57e67] hover:cursor-pointer hover:text-[#d02941]"
+>
+  See all projects
+  <span
+    #row
+    class="transition duration-300 material-symbols-rounded ml-1 text-2xl"
+  >
+    arrow_forward
+  </span>
+</p>

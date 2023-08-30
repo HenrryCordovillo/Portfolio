@@ -14,11 +14,11 @@ import { LayoutModule } from '@layout/layout.module';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-
     AppRoutingModule,
     CoreModule,
     DataModule,
     SharedModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

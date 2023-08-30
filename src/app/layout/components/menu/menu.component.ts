@@ -23,8 +23,6 @@ export class MenuComponent implements OnInit {
 
   public menuItemsList = signal<MenuItem[]>([]);
 
-  constructor() {}
-
   ngOnInit(): void {
     this.menuItemsList = signal(this.menuService.getMenuList());
   }
